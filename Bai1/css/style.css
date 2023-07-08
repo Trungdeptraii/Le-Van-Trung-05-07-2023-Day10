@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+input{
+    display: none;
+}
+.icon-arrow{
+    visibility: hidden;
+}
+input:checked + div {
+    clip-path: circle(200% at left top);
+}
+
+input:checked ~ .manu .icon-manu{
+    visibility: hidden;
+    rotate: 180deg;
+}
+input:checked ~ .manu .icon-arrow{
+    visibility: inherit;
+    rotate: 180deg;
+}
+.icon-manu, .icon-arrow{
+    position: relative;
+    font-size: 30px;
+    color: #31A7F7;
+    transition: rotate 0.2s linear;
+    rotate: 0;
+}
+.icon-arrow{
+    top: 15px;
+    left: -10px;
+}
+.icon-manu{
+    top: 15px;
+    left: 20px;
+}
+.container{
+    background-color: #0eadf7;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.manu{
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    clip-path: circle(80px at left top);
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+}
+.content{
+    position: absolute;
+    padding-top: 150px;
+    color: #fff;
+    text-align: right;
+    margin-right: 500px;
+    right: 0px
+}
+.lists-nav{
+    position: absolute;
+    top: 50px;
+    list-style: none;
+}
+.nav-item{
+    width: 200px;
+    height: 50px;
+    color: #0eadf7;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 0px;
+}
+.lists-nav .nav-item .nav-item-link{
+    display: block;
+    height: 30px;
+    width: 100%;
+    text-decoration: none;
+    color: #31A7F7;
+}
+.lists-nav .nav-item .nav-item-link:focus{
+    color: #000;
+    background: #ddd;
+}
+
+
+.content .content-header{
+    font-size: 45px;
+}
+.content .content-body{
+    position: absolute;
+    left: -30px;
+}
+.content .content-body span{
+    font-size: 30px;
+    font-weight: 100;
+}
